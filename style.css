@@ -1,0 +1,216 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --border: #2a2f3a;
+  --text: #eef1f5;
+  --muted: #8b93a1;
+  --accent: #5b8def;
+  --ok: #37e0a1;
+  --warn: #ffb547;
+  --danger: #ff5f6d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+  padding: 32px 16px;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.tagline {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+.card-title {
+  font-size: 1rem;
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+.add-subject-row {
+  display: flex;
+  gap: 10px;
+}
+
+.add-subject-row input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0d0f13;
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.btn-primary {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.subject-list {
+  display: grid;
+  gap: 14px;
+}
+
+.subject-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.subject-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.subject-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+  color: var(--danger);
+}
+
+.subject-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.percent-value {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.percent-value.ok { color: var(--ok); }
+.percent-value.warn { color: var(--warn); }
+.percent-value.danger { color: var(--danger); }
+
+.progress-bar-bg {
+  height: 8px;
+  border-radius: 4px;
+  background: #22262f;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.subject-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.subject-actions button {
+  flex: 1;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0d0f13;
+  color: var(--text);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.mark-present:hover { border-color: var(--ok); color: var(--ok); }
+.mark-absent:hover { border-color: var(--danger); color: var(--danger); }
+
+.risk-note {
+  font-size: 0.78rem;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+.risk-note.safe {
+  background: rgba(55,224,161,0.08);
+  color: var(--ok);
+  border: 1px solid rgba(55,224,161,0.25);
+}
+
+.risk-note.danger {
+  background: rgba(255,95,109,0.08);
+  color: var(--danger);
+  border: 1px solid rgba(255,95,109,0.25);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 24px;
+}
+
+.hidden { display: none; }
+
+.app-footer {
+  text-align: center;
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
